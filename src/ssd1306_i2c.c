@@ -519,7 +519,7 @@ uint8_t mgos_ssd1306_draw_char (struct mgos_ssd1306 *oled, uint8_t x, uint8_t y,
   if (oled->font == NULL)
     return 0;
 
-  LOG (LL_DEBUG, ("Drawing %c at %d,%d", c, x, y));
+  LOG (LL_VERBOSE_DEBUG, ("Drawing %c at %d,%d", c, x, y));
   // we always have space in the font set
   if ((c < oled->font->char_start) || (c > oled->font->char_end))
     c = ' ';
